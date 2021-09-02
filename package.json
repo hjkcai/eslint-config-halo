@@ -1,5 +1,5 @@
 {
-  "name": "eslint-config-halo",
+  "name": "@hjkcai/eslint-config-halo",
   "version": "8.5.2",
   "description": "The eslint config for halo team",
   "main": "./js/index.js",

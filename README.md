@@ -8,7 +8,7 @@ eslint-config-halo 支持几种不同类型的项目，通过在 .eslintrc.js �
 
 ```js
 module.exports = {
-  extends: '@tencent/eslint-config-halo/js'
+  extends: '@hjkcai/eslint-config-halo/js'
 };
 ```
 
@@ -24,7 +24,7 @@ module.exports = {
 
 ```js
 module.exports = {
-  extends: '@tencent/eslint-config-halo/js/react'
+  extends: '@hjkcai/eslint-config-halo/js/react'
 };
 ```
 
@@ -40,7 +40,7 @@ module.exports = {
 
 ```js
 module.exports = {
-  extends: '@tencent/eslint-config-halo/js/vue'
+  extends: '@hjkcai/eslint-config-halo/js/vue'
 };
 ```
 
@@ -58,7 +58,7 @@ module.exports = {
 
 ```js
 module.exports = {
-  extends: '@tencent/eslint-config-halo/ts'
+  extends: '@hjkcai/eslint-config-halo/ts'
 };
 ```
 
@@ -74,7 +74,7 @@ module.exports = {
 
 ```js
 module.exports = {
-  extends: '@tencent/eslint-config-halo/ts/react'
+  extends: '@hjkcai/eslint-config-halo/ts/react'
 };
 ```
 
@@ -90,7 +90,7 @@ module.exports = {
 
 ```js
 module.exports = {
-  extends: '@tencent/eslint-config-halo/ts/vue'
+  extends: '@hjkcai/eslint-config-halo/ts/vue'
 };
 ```
 
