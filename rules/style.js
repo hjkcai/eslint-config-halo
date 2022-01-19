@@ -30,6 +30,9 @@ module.exports = {
 
     // 单函数代码行数不超过 80 行
     'max-lines-per-function': ['error', { max: 80, skipBlankLines: true, skipComments: true }],
+
+    // import 后需要有空行
+    'import/newline-after-import': 'error',
   },
   overrides: [
     {

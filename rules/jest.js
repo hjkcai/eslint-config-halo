@@ -20,15 +20,14 @@ module.exports = {
     'jest/no-mocks-import': 'error',
     'jest/no-standalone-expect': 'error',
     'jest/no-test-prefixes': 'error',
-    'jest/valid-describe': 'error',
+    'jest/valid-describe-callback': 'error',
     'jest/valid-expect': 'error',
     'jest/valid-expect-in-promise': 'error',
     'jest/valid-title': 'error',
 
     // style
     'jest/no-alias-methods': 'error',
-    'jest/prefer-to-be-null': 'error',
-    'jest/prefer-to-be-undefined': 'error',
+    'jest/prefer-to-be': 'error',
     'jest/prefer-to-contain': 'error',
     'jest/prefer-to-have-length': 'error',
 
@@ -39,4 +38,14 @@ module.exports = {
     'jest/prefer-spy-on': 'error',
     'jest/prefer-strict-equal': 'error',
   },
+  overrides: [
+    {
+      files: ['**/test/**/*.ts', '**/test/**/*.tsx', '**/*.spec.ts', '**/*.spec.tsx'],
+      rules: {
+        // https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/unbound-method.md
+        '@typescript-eslint/unbound-method': 'off',
+        'jest/unbound-method': 'error',
+      },
+    },
+  ],
 };

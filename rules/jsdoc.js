@@ -7,7 +7,9 @@ module.exports = {
     'jsdoc/check-alignment': 'error',
 
     // 要求 jsdoc 的文案要对齐
-    'jsdoc/check-indentation': 'error',
+    'jsdoc/check-indentation': ['error', {
+      excludeTags: ['example', 'description'],
+    }],
 
     // @param 的名字和顺序必须和定义的一致
     'jsdoc/check-param-names': ['error', {
