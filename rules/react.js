@@ -11,5 +11,11 @@ module.exports = {
 
     // 不要求属性有默认值
     'react/require-default-props': 'off',
+
+    // 要求如何定义 state
+    'react/state-in-constructor': 'off',
+
+    // 不要求对组件类成员进行排序
+    'react/sort-comp': 'off',
   },
 };
