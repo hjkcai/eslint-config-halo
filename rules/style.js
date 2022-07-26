@@ -1,6 +1,6 @@
 module.exports = {
   plugins: [
-    'simple-import-sort'
+    'simple-import-sort',
   ],
   rules: {
     // 强制要求类成员之间要保留空行, 但允许单行类成员声明之间没有空行
@@ -49,10 +49,10 @@ module.exports = {
     },
     {
       files: 'index.{js,jsx,mjs,mjsx,ts,tsx,mts,mtsx}',
-      rules: [
+      rules: {
         // export 排序
         'simple-import-sort/exports': 'error',
-      ]
-    }
+      },
+    },
   ],
 };
