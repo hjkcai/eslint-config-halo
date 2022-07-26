@@ -1,4 +1,7 @@
 module.exports = {
+  plugins: [
+    'simple-import-sort'
+  ],
   rules: {
     // 强制要求类成员之间要保留空行, 但允许单行类成员声明之间没有空行
     'lines-between-class-members': ['error', 'always', { exceptAfterSingleLine: true }],
@@ -33,6 +36,9 @@ module.exports = {
 
     // import 后需要有空行
     'import/newline-after-import': 'error',
+
+    // import 排序
+    'simple-import-sort/imports': 'warn',
   },
   overrides: [
     {
@@ -41,5 +47,12 @@ module.exports = {
         'max-lines-per-function': 'off',
       },
     },
+    {
+      files: 'index.{js,jsx,mjs,mjsx,ts,tsx,mts,mtsx}',
+      rules: [
+        // export 排序
+        'simple-import-sort/exports': 'error',
+      ]
+    }
   ],
 };
