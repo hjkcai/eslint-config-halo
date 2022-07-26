@@ -40,7 +40,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['**/test/**/*.ts', '**/test/**/*.tsx', '**/*.spec.ts', '**/*.spec.tsx'],
+      files: ['**/test/**/*.{ts,tsx,mts,mtsx}', '**/*.{spec,test}.{ts,tsx,mts,mtsx}'],
       rules: {
         // https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/unbound-method.md
         '@typescript-eslint/unbound-method': 'off',

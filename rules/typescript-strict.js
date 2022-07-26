@@ -33,5 +33,13 @@ module.exports = {
 
     // 模板字符串里面必须是字符串或数字类型
     '@typescript-eslint/restrict-template-expressions': 'error',
+
+    // 提示有重复的枚举值
+    '@typescript-eslint/no-duplicate-enum-values': 'warn',
+
+    // 导出类型必须明确
+    '@typescript-eslint/explicit-module-boundary-types': ['error', {
+      allowArgumentsExplicitlyTypedAsAny: false,
+    }],
   },
 };

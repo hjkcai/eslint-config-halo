@@ -20,7 +20,7 @@ module.exports = {
     'no-multi-spaces': ['error', { ignoreEOLComments: true }],
 
     // 不允许闭包内变量名覆盖闭包外变量名
-    'no-shadow': 'error',
+    'no-shadow': 'warn',
 
     // 不允许出现没用的表达式
     'no-unused-expressions': 'error',
@@ -36,7 +36,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['**/test/**/*', '**/*.spec.js', '**/*.spec.jsx', '**/*.spec.ts', '**/*.spec.tsx'],
+      files: ['**/test/**/*.{js,jsx,mjs,mjsx,ts,tsx,mts,mtsx}', '**/*.{spec,test}.{js,jsx,mjs,mjsx,ts,tsx,mts,mtsx}'],
       rules: {
         'max-lines-per-function': 'off',
       },

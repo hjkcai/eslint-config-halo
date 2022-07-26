@@ -55,7 +55,7 @@ module.exports = {
     '@typescript-eslint/no-misused-new': 'error',
 
     // 防止一些忘记 await 的情况
-    '@typescript-eslint/no-misused-promises': ['error', { checksConditionals: true }],
+    '@typescript-eslint/no-misused-promises': 'error',
 
     // 禁止 ! 与 ?. ?? 混用
     '@typescript-eslint/no-non-null-asserted-nullish-coalescing': 'error',
@@ -66,7 +66,7 @@ module.exports = {
 
     // 不允许闭包内变量名覆盖闭包外变量名
     'no-shadow': 'off',
-    '@typescript-eslint/no-shadow': 'error',
+    '@typescript-eslint/no-shadow': 'warn',
 
     // 要求 throw 的是 Error 类实例
     '@typescript-eslint/no-throw-literal': 'error',
@@ -123,5 +123,26 @@ module.exports = {
 
     // 取出类内的函数后, 需要 bind 才能调用
     '@typescript-eslint/unbound-method': 'error',
+
+    // 不允许在 union 和 intersection 中有多余的 any/unknown/never
+    '@typescript-eslint/no-redundant-type-constituents': 'error',
+
+    // 不允许空的 export
+    '@typescript-eslint/no-useless-empty-export': 'error',
+
+    // interface 关键字后面要加空格
+    'space-before-blocks': 'off',
+    '@typescript-eslint/space-before-blocks': 'error',
+
+    // 泛型优先写在构造器上, 更加简短
+    '@typescript-eslint/consistent-generic-constructors': ['error', 'constructor'],
+
+    // 导出类型必须明确
+    '@typescript-eslint/explicit-module-boundary-types': ['warn', {
+      allowArgumentsExplicitlyTypedAsAny: true,
+    }],
+
+    // tencent + 允许单行
+    '@typescript-eslint/brace-style': ['error', '1tbs', { allowSingleLine: true }],
   },
 };
