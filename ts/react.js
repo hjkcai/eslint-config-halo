@@ -1,13 +1,13 @@
 module.exports = {
   extends: [
     './index',
-    'eslint-config-airbnb/rules/react',
-    'eslint-config-airbnb/rules/react-hooks',
     '../rules/react',
   ],
   rules: {
+    'no-underscore-dangle': 'off',
     'react/jsx-filename-extension': ['error', {
       extensions: ['.jsx', '.mjsx', '.tsx', 'mtsx'],
     }],
+    'react/react-in-jsx-scope': 'off',
   },
 };

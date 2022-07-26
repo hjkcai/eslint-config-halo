@@ -1,4 +1,8 @@
 module.exports = {
+  extends: [
+    'eslint-config-airbnb/rules/react',
+    'eslint-config-airbnb/rules/react-hooks',
+  ],
   rules: {
     // 使用箭头函数定义 React 组件, 主要是为了能够使用 FC 来定义组件类型
     'react/function-component-definition': ['error', {
@@ -11,6 +15,13 @@ module.exports = {
 
     // 不要求属性有默认值
     'react/require-default-props': 'off',
+
+    // 建议定义 prop-types
+    'react/prop-types': ['warn', {
+      ignore: [],
+      customValidators: [],
+      skipUndeclared: false,
+    }],
 
     // 要求如何定义 state
     'react/state-in-constructor': 'off',

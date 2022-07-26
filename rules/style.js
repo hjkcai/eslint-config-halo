@@ -3,6 +3,9 @@ module.exports = {
     'simple-import-sort',
   ],
   rules: {
+    // tencent + 允许单行
+    'brace-style': ['error', '1tbs', { allowSingleLine: true }],
+
     // 强制要求类成员之间要保留空行, 但允许单行类成员声明之间没有空行
     'lines-between-class-members': ['error', 'always', { exceptAfterSingleLine: true }],
 
@@ -15,6 +18,17 @@ module.exports = {
       { blankLine: 'always', prev: 'multiline-block-like', next: '*' },
       { blankLine: 'always', prev: 'multiline-expression', next: '*' },
     ],
+
+    // tencent + 允许注释超出 120
+    'max-len': ['warn', {
+      code: 120,
+      ignoreComments: true,
+      ignoreTrailingComments: true,
+      ignoreStrings: true,
+      ignoreUrls: true,
+      ignoreRegExpLiterals: true,
+      ignoreTemplateLiterals: true,
+    }],
 
     // 不允许没用的分号
     'no-extra-semi': 'error',

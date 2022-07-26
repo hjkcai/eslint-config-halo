@@ -33,10 +33,13 @@ module.exports = {
 
     // halo
     'jest/consistent-test-it': 'error',
-    'jest/no-test-return-statement': 'error',
+    'jest/no-test-return-statement': 'warn',
+    'jest/prefer-comparison-matcher': 'warn',
+    'jest/prefer-equality-matcher': 'warn',
+    'jest/prefer-expect-resolves': 'warn',
     'jest/prefer-hooks-on-top': 'error',
     'jest/prefer-spy-on': 'error',
-    'jest/prefer-strict-equal': 'error',
+    'jest/prefer-strict-equal': 'warn',
   },
   overrides: [
     {

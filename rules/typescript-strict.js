@@ -28,6 +28,9 @@ module.exports = {
     // 禁止返回 any
     '@typescript-eslint/no-unsafe-return': 'error',
 
+    // 优先用 ??
+    '@typescript-eslint/prefer-nullish-coalescing': 'error',
+
     // 要求加号运算符两侧必须是字符串或数字
     '@typescript-eslint/restrict-plus-operands': ['error', { checkCompoundAssignments: true }],
 

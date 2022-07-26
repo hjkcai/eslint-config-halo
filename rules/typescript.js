@@ -18,7 +18,9 @@ module.exports = {
     '@typescript-eslint/await-thenable': 'error',
 
     // 只允许在附加了额外说明的情况下使用 // @ts-xxx 注释
-    '@typescript-eslint/ban-ts-comment': 'error',
+    '@typescript-eslint/ban-ts-comment': ['error', {
+      'ts-expect-error': { descriptionFormat: '^: ' },
+    }],
 
     // 优先使用 Record 定义 Indexed Signature
     '@typescript-eslint/consistent-indexed-object-style': ['error', 'record'],
@@ -47,6 +49,9 @@ module.exports = {
 
     // 禁止 setTimeout 中传字符串这类 eval 行为
     '@typescript-eslint/no-implied-eval': 'error',
+
+    // 禁止错误的 void 类型
+    '@typescript-eslint/no-invalid-void-type': 'error',
 
     // 禁止无用的 void 语句
     '@typescript-eslint/no-meaningless-void-operator': 'error',
@@ -101,6 +106,12 @@ module.exports = {
 
     // 定义字符串常量, 数字常量这类类型时优先使用 as const
     '@typescript-eslint/prefer-as-const': 'error',
+
+    // 优先用 includes
+    '@typescript-eslint/prefer-includes': 'error',
+
+    // 优先用 ?.
+    '@typescript-eslint/prefer-optional-chain': 'error',
 
     // 数组 reduce 函数的结果类型优先通过类型参数传入
     '@typescript-eslint/prefer-reduce-type-parameter': 'error',
