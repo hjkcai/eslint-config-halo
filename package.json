@@ -1,6 +1,6 @@
 {
   "name": "@hjkcai/eslint-config-halo",
-  "version": "9.0.0",
+  "version": "9.0.1",
   "description": "The eslint config for halo team",
   "main": "./js/index.js",
   "repository": {
