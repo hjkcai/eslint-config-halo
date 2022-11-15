@@ -394,7 +394,7 @@ module.exports = warnToError({
      */
     'no-multiple-empty-lines': [
       'error',
-      { max: 1, maxEOF: 1 },
+      { max: 1, maxBOF: 0, maxEOF: 1 },
     ],
     /**
      * 禁止使用嵌套的三元表达式，比如 a ? b : c ? d : e
