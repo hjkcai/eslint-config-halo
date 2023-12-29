@@ -32,7 +32,7 @@ module.exports = {
     '@typescript-eslint/prefer-nullish-coalescing': 'error',
 
     // 要求加号运算符两侧必须是字符串或数字
-    '@typescript-eslint/restrict-plus-operands': ['error', { checkCompoundAssignments: true }],
+    '@typescript-eslint/restrict-plus-operands': 'error',
 
     // 模板字符串里面必须是字符串或数字类型
     '@typescript-eslint/restrict-template-expressions': 'error',
