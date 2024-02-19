@@ -52,24 +52,6 @@ module.exports = {
 }
 ```
 
-#### Vue + JavaScript 项目
-
-注：Vue 规则暂时不完善，如需使用，欢迎一起建设
-
-```js
-module.exports = {
-  extends: '@hjkcai/eslint-config-halo/js/vue'
-};
-```
-
-```json
-{
-  "scripts": {
-    "lint": "eslint . --ext .js,.jsx,.vue"
-  }
-}
-```
-
 ### TypeScript
 
 #### 普通 TypeScript 项目
@@ -100,24 +82,6 @@ module.exports = {
 {
   "scripts": {
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
-  }
-}
-```
-
-#### Vue + TypeScript 项目
-
-注：Vue 规则暂时不完善，如需使用，欢迎一起建设
-
-```js
-module.exports = {
-  extends: '@hjkcai/eslint-config-halo/ts/vue'
-};
-```
-
-```json
-{
-  "scripts": {
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx,.vue"
   }
 }
 ```

@@ -416,25 +416,7 @@ module.exports = warnToError({
     /**
      * 禁止对函数的参数重新赋值
      */
-    'no-param-reassign': [
-      'warn',
-      {
-        props: true,
-        ignorePropertyModificationsFor: [
-          'acc',
-          'accumulator',
-          'e',
-          'ctx',
-          'req',
-          'request',
-          'res',
-          'response',
-          '$scope',
-          'staticContext',
-          'state',
-        ],
-      },
-    ],
+    'no-param-reassign': 'warn',
     /**
      * 禁止使用 ++ 或 --
      */
@@ -505,6 +487,8 @@ module.exports = warnToError({
       {
         args: 'after-used',
         ignoreRestSiblings: true,
+        argsIgnorePattern: '^_',
+        destructuredArrayIgnorePattern: '^_',
       },
     ],
     /**

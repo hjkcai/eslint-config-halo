@@ -4,9 +4,7 @@ const { warnToError } = require('../utils');
 module.exports = warnToError({
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    project: [
-      './tsconfig.json',
-    ],
+    project: true,
   },
   plugins: ['@typescript-eslint'],
   rules: {
@@ -338,6 +336,8 @@ module.exports = warnToError({
       {
         args: 'after-used',
         ignoreRestSiblings: true,
+        argsIgnorePattern: '^_',
+        destructuredArrayIgnorePattern: '^_',
       },
     ],
     /**
