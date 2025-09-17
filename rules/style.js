@@ -23,8 +23,5 @@ module.exports = {
 
     // async 函数中 try-catch 的返回值必须有 await -- 已弃用, 使用 @typescript-eslint/return-await
     'no-return-await': 'error',
-
-    // import 后需要有空行
-    'import/newline-after-import': 'error',
   },
 };

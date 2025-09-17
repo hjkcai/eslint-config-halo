@@ -66,4 +66,11 @@ export const typescriptEslintConfig = defineConfig(
       '@typescript-eslint/switch-exhaustiveness-check': 'error',
     },
   },
+  {
+    files: ['**/*.tsx'],
+    rules: {
+      // TS 中使用类型校验即可, 不再需要 prop-types.
+      'react/prop-types': 'off',
+    },
+  },
 );
