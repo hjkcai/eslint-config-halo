@@ -17,7 +17,12 @@ export const commonMistakesConfig = defineConfig(
       'max-lines-per-function': ['error', { max: 80, skipBlankLines: true, skipComments: true }],
 
       // 不允许出现没用的表达式. https://eslint.org/docs/latest/rules/no-unused-expressions
-      'no-unused-expressions': 'error',
+      'no-unused-expressions': ['error', {
+        allowShortCircuit: false,
+        allowTernary: false,
+        allowTaggedTemplates: true,
+        enforceForJSX: false,
+      }],
 
       // 在有数字分隔符时, 按照千位分隔格式. https://github.com/sindresorhus/eslint-plugin-unicorn/blob/HEAD/docs/rules/numeric-separators-style.md
       'unicorn/numeric-separators-style': ['error', { onlyIfContainsSeparator: true }],
