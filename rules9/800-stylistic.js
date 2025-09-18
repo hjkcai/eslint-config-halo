@@ -1,7 +1,7 @@
 import stylistic from '@stylistic/eslint-plugin';
 import { defineConfig } from 'eslint/config';
 
-export const stylisticConfig = defineConfig(
+export const stylisticConfig = defineConfig([
   // 引入所有推荐的默认配置. https://eslint.style/rules#rules
   stylistic.configs.customize({ semi: true }),
   {
@@ -14,6 +14,21 @@ export const stylisticConfig = defineConfig(
 
       // 简化没有 children 的 jsx 元素样式. https://eslint.style/rules/jsx-self-closing-comp
       '@stylistic/jsx-self-closing-comp': 'error',
+
+      // 限定注释和周围代码的样式. https://eslint.style/rules/lines-around-comment
+      '@stylistic/lines-around-comment': ['error', {
+        beforeBlockComment: true,
+        beforeLineComment: true,
+        afterHashbangComment: true,
+        allowBlockStart: true,
+        allowObjectStart: true,
+        allowArrayStart: true,
+        allowClassStart: true,
+        allowEnumStart: true,
+        allowInterfaceStart: true,
+        allowModuleStart: true,
+        allowTypeStart: true,
+      }],
 
       // 类成员之间要保留空行, 但允许单行类成员声明之间没有空行. https://eslint.style/rules/lines-between-class-members
       '@stylistic/lines-between-class-members': ['error', 'always', { exceptAfterSingleLine: true }],
@@ -45,4 +60,4 @@ export const stylisticConfig = defineConfig(
       ],
     },
   },
-);
+]);

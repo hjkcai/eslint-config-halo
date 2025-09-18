@@ -1,7 +1,8 @@
 {
   "name": "@hjkcai/eslint-config-halo",
-  "version": "10.0.0",
+  "version": "11.0.0",
   "type": "module",
+  "main": "eslint.config.js",
   "description": "The eslint config for halo team",
   "repository": {
     "type": "git",

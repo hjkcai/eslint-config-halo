@@ -1,9 +1,7 @@
 import eslintComments from '@eslint-community/eslint-plugin-eslint-comments/configs';
 import { defineConfig } from 'eslint/config';
-import eslintPluginUnicorn from 'eslint-plugin-unicorn';
 
-export const commonMistakesConfig = defineConfig(
-  eslintPluginUnicorn.configs.recommended,
+export const commonMistakesConfig = defineConfig([
   eslintComments.recommended,
   {
     rules: {
@@ -41,4 +39,4 @@ export const commonMistakesConfig = defineConfig(
       'max-lines-per-function': 'off',
     },
   },
-);
+]);

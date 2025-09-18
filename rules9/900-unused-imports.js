@@ -1,7 +1,7 @@
 import { defineConfig } from 'eslint/config';
 import unusedImports from 'eslint-plugin-unused-imports';
 
-export const unusedImportsConfig = defineConfig(
+export const unusedImportsConfig = defineConfig([
   {
     plugins: {
       'unused-imports': unusedImports,
@@ -13,12 +13,14 @@ export const unusedImportsConfig = defineConfig(
       'unused-imports/no-unused-vars': [
         'error',
         {
+          ignoreRestSiblings: true,
           vars: 'all',
           varsIgnorePattern: '^_',
           args: 'after-used',
           argsIgnorePattern: '^_',
+          destructuredArrayIgnorePattern: '^_',
         },
       ],
     },
   },
-);
+]);

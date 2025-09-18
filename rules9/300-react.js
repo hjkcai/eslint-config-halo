@@ -3,7 +3,7 @@ import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 
 // FIXME: Warning: React version not specified in eslint-plugin-react settings. See https://github.com/jsx-eslint/eslint-plugin-react#configuration
-export const reactConfig = defineConfig(
+export const reactConfig = defineConfig([
   react.configs.flat.recommended,
   reactHooks.configs['recommended-latest'],
   {
@@ -120,4 +120,11 @@ export const reactConfig = defineConfig(
       'react/void-dom-elements-no-children': 'error',
     },
   },
-);
+  {
+    files: ['**/*.{tsx,mtsx}'],
+    rules: {
+      // TS 中使用类型校验即可, 不再需要 prop-types.
+      'react/prop-types': 'off',
+    },
+  },
+]);
