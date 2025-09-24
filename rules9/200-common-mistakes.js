@@ -22,6 +22,8 @@ export const commonMistakesConfig = defineConfig([
         enforceForJSX: false,
       }],
 
+      'preserve-caught-error': 'error',
+
       // 在有数字分隔符时, 按照千位分隔格式. https://github.com/sindresorhus/eslint-plugin-unicorn/blob/HEAD/docs/rules/numeric-separators-style.md
       'unicorn/numeric-separators-style': ['error', { onlyIfContainsSeparator: true }],
 
