@@ -10,6 +10,8 @@ export const typescriptConfig = defineConfig([
     ],
     rules: {
       'no-undef': 'off',
+      'no-unsafe-optional-chaining': 'off',
+      'unicorn/no-this-assignment': 'off',
 
       // 总是使用 T[] 定义数组 (而不是 Array<T>). https://typescript-eslint.io/rules/array-type/
       '@typescript-eslint/array-type': ['error', { default: 'array' }],
@@ -25,6 +27,8 @@ export const typescriptConfig = defineConfig([
         fixStyle: 'inline-type-imports',
         disallowTypeAnnotations: false,
       }],
+
+      '@typescript-eslint/explicit-member-accessibility': 'error',
 
       '@typescript-eslint/explicit-module-boundary-types': ['error', {
         allowArgumentsExplicitlyTypedAsAny: false,

@@ -3,7 +3,6 @@ import { importX } from 'eslint-plugin-import-x';
 import simpleImportSort from 'eslint-plugin-simple-import-sort';
 
 export const importsConfig = defineConfig([
-  // airbnb.rules.base.imports,
   {
     plugins: {
       'import-x': importX,
@@ -36,10 +35,16 @@ export const importsConfig = defineConfig([
     },
   },
   {
-    files: ['index.{js,jsx,mjs,mjsx,ts,tsx,mts,mtsx}'],
-    plugins: {
-      'simple-import-sort': simpleImportSort,
+    files: ['src/**/*'],
+    rules: {
+      // https://github.com/un-ts/eslint-plugin-import-x/blob/HEAD/docs/rules/no-extraneous-dependencies.md
+      'import-x/no-extraneous-dependencies': ['warn', {
+        devDependencies: false,
+      }],
     },
+  },
+  {
+    files: ['index.{js,jsx,mjs,mjsx,ts,tsx,mts,mtsx}'],
     rules: {
       // export 排序
       'simple-import-sort/exports': 'warn',

@@ -1,15 +1,28 @@
-import eslintComments from '@eslint-community/eslint-plugin-eslint-comments/configs';
+import eslintComments from '@eslint-community/eslint-plugin-eslint-comments';
 import { defineConfig } from 'eslint/config';
 
 export const commonMistakesConfig = defineConfig([
-  eslintComments.recommended,
+  {
+    // 同 https://github.com/eslint-community/eslint-plugin-eslint-comments/blob/main/lib/configs/recommended.js
+    // 但是为了兼容先前的包, 重命名成先前包相同的名称.
+    plugins: {
+      'eslint-comments': eslintComments,
+    },
+    rules: {
+      'eslint-comments/disable-enable-pair': 'error',
+      'eslint-comments/no-aggregating-enable': 'error',
+      'eslint-comments/no-duplicate-disable': 'error',
+      'eslint-comments/no-unlimited-disable': 'error',
+      'eslint-comments/no-unused-enable': 'error',
+    },
+  },
   {
     rules: {
       // 注释中的 eslint-disable 和 eslint-enable 必须成对出现, 但允许在文件开头 disable 某些规则. https://eslint-community.github.io/eslint-plugin-eslint-comments/rules/disable-enable-pair.html
-      '@eslint-community/eslint-comments/disable-enable-pair': ['error', { allowWholeFile: true }],
+      'eslint-comments/disable-enable-pair': ['error', { allowWholeFile: true }],
 
       // 不允许出现未使用的 eslint-disable. https://eslint-community.github.io/eslint-plugin-eslint-comments/rules/no-unused-disable.html
-      '@eslint-community/eslint-comments/no-unused-disable': 'error',
+      'eslint-comments/no-unused-disable': 'error',
 
       // 单函数代码行数不超过 80 行. https://eslint.org/docs/latest/rules/max-lines-per-function
       'max-lines-per-function': ['error', { max: 80, skipBlankLines: true, skipComments: true }],

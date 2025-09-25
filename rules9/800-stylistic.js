@@ -33,6 +33,9 @@ export const stylisticConfig = defineConfig([
       // 类成员之间要保留空行, 但允许单行类成员声明之间没有空行. https://eslint.style/rules/lines-between-class-members
       '@stylistic/lines-between-class-members': ['error', 'always', { exceptAfterSingleLine: true }],
 
+      // 一行最多写 2 个 Statement 语句. https://eslint.style/rules/max-statements-per-line
+      '@stylistic/max-statements-per-line': ['error', { max: 2 }],
+
       // 不允许没用的分号. https://eslint.style/rules/no-extra-semi
       '@stylistic/no-extra-semi': 'error',
 
