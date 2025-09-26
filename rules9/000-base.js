@@ -46,7 +46,7 @@ export const baseConfig = defineConfig([
             object: true,
           },
           AssignmentExpression: {
-            array: true,
+            array: false, // 但是允许 x = y[0]
             object: false,
           },
         },
