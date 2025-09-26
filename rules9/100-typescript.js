@@ -12,6 +12,7 @@ export const typescriptConfig = defineConfig([
       'no-undef': 'off',
       'no-unsafe-optional-chaining': 'off',
       'unicorn/no-this-assignment': 'off',
+      'unicorn/no-useless-undefined': ['error', { checkArguments: false }],
 
       // 总是使用 T[] 定义数组 (而不是 Array<T>). https://typescript-eslint.io/rules/array-type/
       '@typescript-eslint/array-type': ['error', { default: 'array' }],

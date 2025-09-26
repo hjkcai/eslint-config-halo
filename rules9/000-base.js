@@ -25,6 +25,7 @@ export const baseConfig = defineConfig([
       'camelcase': 'off',
       'consistent-return': 'off',
       'default-case': 'off',
+      'func-names': 'off',
       'max-classes-per-file': 'off',
       'no-continue': 'off',
       'no-console': 'off',
@@ -35,6 +36,24 @@ export const baseConfig = defineConfig([
       'no-param-reassign': ['error', { props: false }],
       'no-void': 'off', // 与 no-floating-promise 冲突.
       'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
+
+      // 同 tencent
+      'prefer-destructuring': [
+        'error',
+        {
+          VariableDeclarator: {
+            array: false,
+            object: true,
+          },
+          AssignmentExpression: {
+            array: true,
+            object: false,
+          },
+        },
+        {
+          enforceForRenamedProperties: false,
+        },
+      ],
 
       // https://github.com/sindresorhus/eslint-plugin-unicorn/blob/v61.0.2/docs/rules/no-null.md
       'unicorn/catch-error-name': 'off',
